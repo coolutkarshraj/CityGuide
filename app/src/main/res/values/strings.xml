@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">City Guide</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_accont">Account</string>
+    <string name="city_guide_the_travel_machine">City Guide The Travel Machine</string>
+    <string name="todo">TODO</string>
 </resources>

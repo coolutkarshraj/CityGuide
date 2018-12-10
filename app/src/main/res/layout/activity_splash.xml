@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".Activity.Splash.SplashActivity">
 
     <ImageView
+        android:id="@+id/iv_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/splash"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"/>
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="100dp"
+        android:src="@drawable/splash"
+        android:contentDescription="@string/todo" />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_guide_the_travel_machine"
+        android:fontFamily="@font/exo_bold"
+        android:layout_below="@+id/iv_splash"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:padding="5dp"
+        android:id="@+id/tv_app_title"
+        android:textSize="16sp"/>
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_title"
+        android:layout_marginLeft="25dp"
+        android:max="100"
+        android:progress="20"
+        android:secondaryProgress="50"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:layout_marginTop="101dp"
+        android:layout_marginRight="25dp" />
+
+</RelativeLayout>

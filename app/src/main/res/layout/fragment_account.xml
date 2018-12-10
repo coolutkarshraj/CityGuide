@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".Fragment.AccountFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_manage_profile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_view_large"
+        android:background="@drawable/edittext_underbar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_layout_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="Manage Profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/head_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_orders"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_view_large"
+        android:background="@drawable/edittext_underbar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_layout_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="History"
+            android:textColor="@color/black"
+            android:textSize="@dimen/head_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_help"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_view_large"
+        android:background="@drawable/edittext_underbar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_layout_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="Help"
+            android:textColor="@color/black"
+            android:textSize="@dimen/head_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_terms_condition"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_view_large"
+        android:background="@drawable/edittext_underbar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_layout_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="Terms and Conditions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/head_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_view_large"
+        android:background="@drawable/edittext_underbar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_layout_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="About"
+            android:textColor="@color/black"
+            android:textSize="@dimen/head_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_view_large"
+        android:background="@drawable/edittext_underbar"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_layout_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="@dimen/head_text" />
+    </LinearLayout>
+</LinearLayout>

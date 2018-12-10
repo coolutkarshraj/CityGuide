@@ -30,3 +30,9 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+//a b c = key 207 modulus nikallenge
+//cba = colision -open addressing use karta hai
+//cluster
+//a = hash method aski character nikalenge
+//seprate chaning - collision - index linkedlist 1 node -i link
+//abc 2007 cba 201 banayega
