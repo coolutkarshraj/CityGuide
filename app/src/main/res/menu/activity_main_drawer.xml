@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/search_near_by"
+            android:title="Search Near By" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/favourite"
+            android:title="Favourite" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/fake_gps"
+            android:title="Fake Gps" />
+        <item
+            android:id="@+id/live_navigation"
+            android:icon="@drawable/navigation"
+            android:title="Live Navigation" />
+        <item
+            android:id="@+id/work"
+            android:icon="@drawable/work"
+            android:title="Work" />
+        <item
+            android:id="@+id/planned_drive"
+            android:icon="@drawable/planneddrive"
+            android:title="Planned Drive" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Share Location" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/communicate"
+                android:title="Chat" />
+        </menu>
+    </item>
+
+</menu>

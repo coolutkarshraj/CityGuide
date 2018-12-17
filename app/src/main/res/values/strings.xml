@@ -6,4 +6,11 @@
     <string name="title_accont">Account</string>
     <string name="city_guide_the_travel_machine">City Guide The Travel Machine</string>
     <string name="todo">TODO</string>
+    <string name="nav_header_title">Utkarsh Raj |8825383940</string>
+    <string name="nav_header_subtitle">utkarsh@cityguide.com</string>
+    <string name="nav_header_desc">Todo</string>
+    <string name="profile_transition">profile_transition</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_map_view_fragment">Map</string>
 </resources>
