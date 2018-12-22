@@ -1,6 +1,7 @@
 package com.io.utkarsh.cityguide.Activity.Home;
 
 import android.accounts.Account;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,12 +10,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.io.utkarsh.cityguide.Activity.NearByPlace.NearByPlaceActivity;
 import com.io.utkarsh.cityguide.Fragment.AccountFragment;
 import com.io.utkarsh.cityguide.Fragment.MapViewFragment;
 import com.io.utkarsh.cityguide.R;
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Fragment currFrag;
     AccountFragment accountFragment;
     MapViewFragment mapViewFragment;
+    public static String place;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -56,6 +60,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startWorking();
     }
 
+    private void navigateToMapViewFragment() {
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            place = bundle.getString("place");
+            changeFrag(mapViewFragment,true);
+        }else {
+            changeFrag(mapViewFragment,true);
+        }
+    }
+
     private void bindListner() {
         ivOpenDrawer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void startWorking() {
-
+        navigateToMapViewFragment();
     }
 
     private void changeFrag(Fragment fragment, boolean addToBack) {
@@ -84,11 +98,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void initView() {
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ivOpenDrawer = findViewById(R.id.ivOpenDrawer);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        ivOpenDrawer = findViewById(R.id.ivOpenDrawer);
+        mapViewFragment = new MapViewFragment();
+
     }
 
     @Override
@@ -113,7 +133,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.navsearch_near_by) {
+            Intent intent = new Intent(MainActivity.this,NearByPlaceActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
 

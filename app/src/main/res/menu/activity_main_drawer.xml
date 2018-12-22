@@ -9,7 +9,7 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/navsearch_near_by"
             android:icon="@drawable/search_near_by"
             android:title="Search Near By" />
         <item

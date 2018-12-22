@@ -38,6 +38,8 @@
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".Activity.Login.LoginActivity" />
+        <activity android:name=".Activity.NearByPlace.NearByPlaceActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <service android:name=".Firebase.MyFirebaseInstanceIdServices">
             <intent-filter>
@@ -67,10 +69,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".Fragment.MapViewFragment"
-            android:label="@string/title_activity_map_view_fragment"></activity>
     </application>
 
 </manifest>

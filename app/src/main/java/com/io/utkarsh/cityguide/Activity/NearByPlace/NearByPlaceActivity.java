@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.io.utkarsh.cityguide.Activity.Home.MainActivity;
@@ -15,6 +19,9 @@ import com.io.utkarsh.cityguide.Adapter.NnearByPlacesAdapter;
 import com.io.utkarsh.cityguide.R;
 
 import java.util.ArrayList;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Utkarsh on 23/12/2018.
@@ -25,6 +32,10 @@ public class NearByPlaceActivity extends AppCompatActivity {
     ArrayList<String> places;
     ArrayList<Integer> placesIcon;
     GridView placeView;
+    @BindView(R.id.tv_title)
+    TextView tvTitle;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +109,15 @@ public class NearByPlaceActivity extends AppCompatActivity {
 
     private void init() {
         activity = NearByPlaceActivity.this;
+        ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle("");
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_close_toolbar_24dp);
+        }
+        tvTitle.setText("Search Near By Places");
         places = new ArrayList<String>();
         placesIcon = new ArrayList<Integer>();
         placeView = (GridView)findViewById(R.id.place);
@@ -112,5 +132,14 @@ public class NearByPlaceActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

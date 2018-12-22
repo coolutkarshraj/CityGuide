@@ -8,8 +8,9 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.ral.utkarsh.cityguide.Activity.MainActivity;
-import com.ral.utkarsh.cityguide.services.DownloadUrl;
+import com.io.utkarsh.cityguide.Activity.Home.MainActivity;
+import com.io.utkarsh.cityguide.Services.DownloadUrl;
+
 
 import org.json.JSONObject;
 
@@ -64,7 +65,6 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             markerOptions.title(placeName + " : " + vicinity);
             mMap.addMarker(markerOptions);
             markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-            //move map camera
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
             MainActivity.place = "places";
