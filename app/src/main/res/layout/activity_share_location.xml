@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ral.utkarsh.cityguide.Activity.ShareLocationActivity"
+    android:orientation="vertical">
+        <Button
+            android:id="@+id/curren_loc"
+            android:layout_marginTop="210dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#daf7a6"
+            android:layout_height="50dp"
+            android:text="Share Current Location"/>
+       <Button
+           android:id="@+id/custom_loc"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           android:layout_marginTop="30dp"
+           android:layout_width="match_parent"
+           android:background="#00ff1d"
+           android:layout_height="50dp"
+           android:text="Share Custom Location"/>
+
+
+</LinearLayout>
